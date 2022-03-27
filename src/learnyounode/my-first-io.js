@@ -4,17 +4,6 @@ const buf = fs.readFileSync(process.argv[2]);
 
 const str = buf.toString();
 
-const lineSplit = str.split("\n")
-let lineCount = 0
+const lineSplit = str.split('\n')
 
-for(i=0; i<lineSplit.length; i++){
-
-    if(lineSplit[i]=='\r'){
-        lineCount++
-    }
-}
-//console.log(str)
-
-//console.log(lineSplit)
-
-console.log(lineCount)
+console.log(lineSplit.length-1)
